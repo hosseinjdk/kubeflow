@@ -13,7 +13,6 @@
 # limitations under the License.
 """Sample pipeline for passing data in KFP."""
 from typing import Dict, List
-
 from kfp import compiler
 from kfp import dsl
 from kfp.dsl import component
@@ -110,7 +109,6 @@ def train(
             f'input_bool: {input_bool}, type {type(input_bool)} || '
             f'input_dict: {input_dict}, type {type(input_dict)} || '
             f'input_list: {input_list}, type {type(input_list)} \n')
-
     with open(model.path, 'w') as output_file:
         for i in range(num_steps):
             output_file.write(f'Step {i}\n{line}\n=====\n')
